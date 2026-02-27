@@ -1,7 +1,28 @@
 <Solution>
+  <Folder Name="/docs/" />
+  <Folder Name="/docs/images/">
+    <File Path="docs/images/ER-DIAGRAM.png" />
+    <File Path="docs/images/USE-CASE.jpg" />
+  </Folder>
+  <Folder Name="/docs/text/">
+    <File Path="docs/text/domain-flow.md" />
+  </Folder>
   <Folder Name="/Solution Items/">
     <File Path=".gitignore" />
     <File Path="LICENSE" />
     <File Path="README.md" />
   </Folder>
+  <Folder Name="/src/" />
+  <Folder Name="/src/core/">
+    <Project Path="src/Core/FonlaBeni.Application/FonlaBeni.Application.csproj" Id="0fc5f9ef-dc9c-45c3-aade-0c624d844063" />
+    <Project Path="src/Core/FonlaBeni.Domain/FonlaBeni.Domain.csproj" />
+  </Folder>
+  <Folder Name="/src/Infrastructure/">
+    <Project Path="src/Infrastructure/FonlaBeni.Infrastructure/FonlaBeni.Infrastructure.csproj" Id="38b4eb29-c66f-4da8-9e16-c3c0cece0e55" />
+    <Project Path="src/Infrastructure/FonlaBeni.Persistence/FonlaBeni.Persistence.csproj" Id="20fadcdf-eaf6-4927-9a35-f4ffeff0d981" />
+  </Folder>
+  <Folder Name="/src/Presentation/">
+    <Project Path="src/Presentation/FonlaBeni.Web/FonlaBeni.Web.csproj" Id="fce07d34-1399-4ee3-9fb8-94fe88415cd7" />
+  </Folder>
+  <Folder Name="/test/" />
 </Solution>
