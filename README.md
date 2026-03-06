@@ -19,7 +19,7 @@ Projenin geliştirilmesinde aşağıdaki teknoloji yığınından (tech stack) f
 ## 📋 Yol Haritası (Roadmap)
 - [x] Proje fikrinin oluşturulması
 - [x] Use Case ve ER diyagramlarının çizilmesi
-- [ ] Veritabanı tablolarının oluşturulması (Code-First yaklaşımı ile)
+- [x] Veritabanı tablolarının oluşturulması (Code-First yaklaşımı ile)
 - [ ] Core ve Data katmanlarının kodlanması
 - [ ] İş mantığı (Business/Service) katmanının entegrasyonu
 - [ ] MVC ile arayüz tasarımlarının giydirilmesi
