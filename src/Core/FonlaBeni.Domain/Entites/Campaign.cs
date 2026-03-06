@@ -23,6 +23,7 @@ namespace FonlaBeni.Domain.Entites
 
         //Foreign Key
         public Guid CategoryId { get; set; }
+        public Guid UserId { get; set; }
 
     }
 }

@@ -12,6 +12,7 @@ public class Donation:BaseEntity
 
     //Foreign Key
     public Guid CampaignId { get; set; }
+    public Guid UserId { get; set; }
 
     //Navigation Properties
     public Campaign Campaign { get; set; }
