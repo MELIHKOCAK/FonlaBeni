@@ -1,2 +1,2 @@
 ﻿namespace FonlaBeni.Application.DataTransferObject.Category.Create;
-public record CategoryRequestDto(string Name, string Description);
+public record CreateCategoryDto(string Name, string Description);
