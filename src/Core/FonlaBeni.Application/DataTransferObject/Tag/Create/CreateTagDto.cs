@@ -1,2 +1,2 @@
 ﻿namespace FonlaBeni.Application.DataTransferObject.Tag.Create;
-public record TagRequestDto(string Name, string Slug);
+public record CreateTagDto(string Name, string Slug);
