@@ -7,6 +7,10 @@ public class UpdateCampaignValidation : AbstractValidator<UpdateCampaignDto>
 {
     public UpdateCampaignValidation()
     {
+        RuleFor(x => x.Id)
+            .NotNull()
+            .WithMessage("Id Alanı Boş Olamaz");
+
         RuleFor(x => x.Title)
             .MinimumLength(20)
             .NotEmpty()
