@@ -1,4 +1,5 @@
 ﻿using FluentValidation;
+using FonlaBeni.Application.Extensition;
 
 namespace FonlaBeni.Application.Payment.Create;
 
@@ -7,7 +8,7 @@ public class CreatePaymentValidation : AbstractValidator<CreatePaymentDto>
     public CreatePaymentValidation()
     {
         RuleFor(x => x.ProviderId)
-            .NotNull().WithMessage("Sağlayıcı Id Boş Olamaz.");
+            .IsRequired("Ödeme Sağlayıcı");
 
         RuleFor(x => x.ProviderName)
             .Must(provider => Enum.IsDefined(typeof(Domain.Enums.Providers), provider));
