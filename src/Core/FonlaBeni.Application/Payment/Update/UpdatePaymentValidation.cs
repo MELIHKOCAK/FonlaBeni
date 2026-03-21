@@ -1,4 +1,5 @@
 ﻿using FluentValidation;
+using FonlaBeni.Application.Extensition;
 
 namespace FonlaBeni.Application.Payment.Update;
 public class UpdatePaymentValidation : AbstractValidator<UpdatePaymentDto>
@@ -6,7 +7,7 @@ public class UpdatePaymentValidation : AbstractValidator<UpdatePaymentDto>
     public UpdatePaymentValidation()
     {
         RuleFor(x => x.Id)
-            .NotEmpty().WithMessage("Id Alanı Boş Geçilemez.")
+            .IsRequired("Id")
             .Must(id => Guid.TryParse(id.ToString(), out _)).WithMessage("Geçersiz Id Değeri");
 
         RuleFor(x => x.Status)
