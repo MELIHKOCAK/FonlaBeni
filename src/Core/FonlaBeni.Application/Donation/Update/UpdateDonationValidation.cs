@@ -1,4 +1,5 @@
 ﻿using FluentValidation;
+using FonlaBeni.Application.Extensition;
 
 namespace FonlaBeni.Application.Donation.Update;
 public class UpdateDonationValidation : AbstractValidator<UpdateDonationDto>
@@ -6,7 +7,7 @@ public class UpdateDonationValidation : AbstractValidator<UpdateDonationDto>
     public UpdateDonationValidation()
     {
         RuleFor(x => x.Id)
-            .NotEmpty().WithMessage("Bağış Id'si Boş Olamaz!");
+            .IsRequired("Bağış Id");
 
         RuleFor(x => x.Status)
           .Must(status => Enum.IsDefined(typeof(Domain.Enums.PaymentStatus), status));
