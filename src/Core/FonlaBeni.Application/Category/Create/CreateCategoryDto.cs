@@ -1,0 +1,2 @@
+﻿namespace FonlaBeni.Application.Category.Create;
+public record CreateCategoryDto(string Name, string Description);
