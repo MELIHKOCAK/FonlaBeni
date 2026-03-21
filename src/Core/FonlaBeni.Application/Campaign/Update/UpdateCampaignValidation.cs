@@ -1,4 +1,5 @@
 ﻿using FluentValidation;
+using FonlaBeni.Application.Extensition;
 
 namespace FonlaBeni.Application.Campaign.Update;
 
@@ -7,27 +8,26 @@ public class UpdateCampaignValidation : AbstractValidator<UpdateCampaignDto>
     public UpdateCampaignValidation()
     {
         RuleFor(x => x.Id)
-            .NotNull()
-            .WithMessage("Id Alanı Boş Olamaz");
+            .IsRequired("Id");
 
         RuleFor(x => x.Title)
+            .IsRequired("Başlık")
             .MinimumLength(20)
-            .NotEmpty()
             .MaximumLength(150)
-            .WithMessage("Başlık Boş Olamaz, Başlık 20 Karakterden Fazla Olmalı, Başlık 150 Karakterden Az Olmalı");
+            .WithMessage("Başlık 20 Karakterden Fazla Olmalı, Başlık 150 Karakterden Az Olmalı");
 
         RuleFor(x => x.Description)
-            .NotEmpty()
+            .IsRequired("Açıklama")
             .MinimumLength(300)
-            .WithMessage("Açıklama Boş Olamaz, Açıklama En Az 300 Karakter Olmalıdır");
+            .WithMessage("Açıklama En Az 300 Karakter Olmalıdır");
 
         RuleFor(x => x.CurrentAmount)
-            .NotEmpty()
+            .IsRequired("Mevcut Tutar")
             .GreaterThanOrEqualTo(0)
-            .WithMessage("Mevcut Tutar Boş Olamaz Ve Negatif Olamaz");
+            .WithMessage("Mevcut Tutar Negatif Olamaz");
 
         RuleFor(x => x.BackersCount)
-            .NotEmpty()
+            .IsRequired("Destekçi Sayısı")
             .LessThan(0)
             .WithMessage("Destekçi Sayısı Negatif Olamaz.");
 
@@ -38,7 +38,6 @@ public class UpdateCampaignValidation : AbstractValidator<UpdateCampaignDto>
            .Must(status => Enum.IsDefined(typeof(Domain.Enums.PaymentStatus), status));
 
         RuleFor(x => x.CategoryId)
-           .NotEmpty()
-           .WithMessage("Kategori Boş Olamaz! Lütfen Bir Kategori Seçiniz...");
+           .IsRequired("Kategori Id");
     }
 }
