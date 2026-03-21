@@ -1,4 +1,5 @@
 ﻿using FluentValidation;
+using FonlaBeni.Application.Extensition;
 
 namespace FonlaBeni.Application.CampaignImage.Create;
 
@@ -7,11 +8,9 @@ public class CreateCampaignImageValidation : AbstractValidator<CreateCampaignIma
     public CreateCampaignImageValidation()
     {
         RuleFor(x => x.Url)
-            .NotEmpty()
-            .WithMessage("Resim URL'si boş olamaz!");
+            .IsRequired("Url");
 
         RuleFor(x => x.CampaignId)
-            .NotEmpty()
-            .WithMessage("Kampanya ID'si boş olamaz!");
+            .IsRequired("Kampanya Id");
     }
 }
