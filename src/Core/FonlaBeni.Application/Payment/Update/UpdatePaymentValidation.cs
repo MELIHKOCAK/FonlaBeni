@@ -7,6 +7,7 @@ public class UpdatePaymentValidation : AbstractValidator<UpdatePaymentDto>
     public UpdatePaymentValidation()
     {
         RuleFor(x => x.Id)
+            .Cascade(CascadeMode.Stop)
             .IsRequired("Id")
             .Must(id => Guid.TryParse(id.ToString(), out _)).WithMessage("Geçersiz Id Değeri");
 
