@@ -8,6 +8,7 @@ public class CreateDonationValidation : AbstractValidator<CreateDonationDto>
     public CreateDonationValidation()
     {
         RuleFor(x => x.Amount)
+            .Cascade(CascadeMode.Stop)
             .IsRequired("Tutar")
             .GreaterThan(0).WithMessage("Tutar 0'dan büyük olmalıdır");
 
