@@ -11,22 +11,26 @@ public class UpdateCampaignValidation : AbstractValidator<UpdateCampaignDto>
             .IsRequired("Id");
 
         RuleFor(x => x.Title)
+            .Cascade(CascadeMode.Stop)
             .IsRequired("Başlık")
             .MinimumLength(20)
             .MaximumLength(150)
             .WithMessage("Başlık 20 Karakterden Fazla Olmalı, Başlık 150 Karakterden Az Olmalı");
 
         RuleFor(x => x.Description)
+            .Cascade(CascadeMode.Stop)
             .IsRequired("Açıklama")
             .MinimumLength(300)
             .WithMessage("Açıklama En Az 300 Karakter Olmalıdır");
 
         RuleFor(x => x.CurrentAmount)
+            .Cascade(CascadeMode.Stop)
             .IsRequired("Mevcut Tutar")
             .GreaterThanOrEqualTo(0)
             .WithMessage("Mevcut Tutar Negatif Olamaz");
 
         RuleFor(x => x.BackersCount)
+            .Cascade(CascadeMode.Stop)
             .IsRequired("Destekçi Sayısı")
             .LessThan(0)
             .WithMessage("Destekçi Sayısı Negatif Olamaz.");
