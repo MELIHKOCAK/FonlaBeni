@@ -1,9 +1,9 @@
 ﻿using FluentValidation;
 using FonlaBeni.Application.Extensition;
 
-namespace FonlaBeni.Application.Category.Update;
+namespace FonlaBeni.Application.Category.Commands.UpdateCategory;
 
-public class UpdateCategoryValidation : AbstractValidator<UpdateCategoryDto>
+public class UpdateCategoryValidation : AbstractValidator<UpdateCategoryCommandRequest>
 {
     public UpdateCategoryValidation()
     {
