@@ -1,9 +1,9 @@
 ﻿using FluentValidation;
 using FonlaBeni.Application.Extensition;
 
-namespace FonlaBeni.Application.CampaignImage.Create;
+namespace FonlaBeni.Application.CampaignImage.Commands.Create;
 
-public class CreateCampaignImageValidation : AbstractValidator<CreateCampaignImageDto>
+public class CreateCampaignImageValidation : AbstractValidator<CreateCampaignImageCommandRequest>
 {
     public CreateCampaignImageValidation()
     {

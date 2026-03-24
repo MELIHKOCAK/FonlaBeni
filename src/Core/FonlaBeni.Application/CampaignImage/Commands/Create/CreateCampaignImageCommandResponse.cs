@@ -1,0 +1,4 @@
+﻿namespace FonlaBeni.Application.CampaignImage.Commands.Create
+{
+    public record CreateCampaignImageCommandResponse;
+}
