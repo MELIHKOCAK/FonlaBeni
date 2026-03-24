@@ -1,9 +1,8 @@
 ﻿using FluentValidation;
-using FonlaBeni.Application.Category.Create;
 using FonlaBeni.Application.Extensition;
 
-namespace FonlaBeni.Application.Validation;
-public class CreateCategoryValidation : AbstractValidator<CreateCategoryDto>
+namespace FonlaBeni.Application.Category.Commands.CreateCategory;
+public class CreateCategoryValidation : AbstractValidator<CreateCategoryCommandRequest>
 {
     public CreateCategoryValidation()
     {
@@ -12,4 +11,5 @@ public class CreateCategoryValidation : AbstractValidator<CreateCategoryDto>
             .IsRequired("Kategori İsim")
             .MaximumLength(100).WithMessage("Kategorinin İsminin Uzunluğu 100 Karakterden Az Olmalıdır.");
     }
+
 }

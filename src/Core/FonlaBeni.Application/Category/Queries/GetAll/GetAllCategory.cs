@@ -12,5 +12,5 @@ namespace FonlaBeni.Application.Category.Queries.GetAll
         }
     }
 
-    public record GetAllCategoryQueryResponse(string Name, string Slug, string Description);
+    public record GetAllCategoryQueryResponse(Guid Id, string Name, string Slug, string Description);
 }
