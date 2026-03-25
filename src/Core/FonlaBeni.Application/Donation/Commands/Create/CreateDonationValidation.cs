@@ -1,9 +1,10 @@
 ﻿using FluentValidation;
+using FonlaBeni.Application.Donation.Create;
 using FonlaBeni.Application.Extensition;
 
-namespace FonlaBeni.Application.Donation.Create;
+namespace FonlaBeni.Application.Donation.Commands.Create;
 
-public class CreateDonationValidation : AbstractValidator<CreateDonationDto>
+public class CreateDonationValidation : AbstractValidator<CreateDonationCommandRequest>
 {
     public CreateDonationValidation()
     {
