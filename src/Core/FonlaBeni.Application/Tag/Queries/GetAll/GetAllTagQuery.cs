@@ -1,6 +1,6 @@
 ﻿using MediatR;
 
-namespace FonlaBeni.Application.Tag.Queries
+namespace FonlaBeni.Application.Tag.Queries.GetAll
 {
     public record GetAllTagQueryRequest : IRequest<List<GetAllTagQueryResponse>>;
 
