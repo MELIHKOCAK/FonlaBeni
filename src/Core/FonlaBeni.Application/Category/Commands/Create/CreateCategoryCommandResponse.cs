@@ -1,4 +1,3 @@
-﻿namespace FonlaBeni.Application.Category.Commands.CreateCategory
-{
-    public record CreateCategoryCommandResponse(Guid Id);
-}
+﻿namespace FonlaBeni.Application.Category.Commands.Create;
+
+public record CreateCategoryCommandResponse(Guid Id);

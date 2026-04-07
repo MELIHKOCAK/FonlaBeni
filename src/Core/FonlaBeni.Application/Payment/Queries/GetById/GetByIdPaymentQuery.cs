@@ -3,15 +3,15 @@ using MediatR;
 
 namespace FonlaBeni.Application.Payment.Queries.GetById
 {
-    public record GetAllPaymentQueryRequest(Guid Id) : IRequest<GetAllPaymentQueryResponse>;
+    public record GetByIdPaymentQueryRequest(Guid Id) : IRequest<GetByIdPaymentQueryResponse>;
 
-    public class GetAllPaymentQueryHandler : IRequestHandler<GetAllPaymentQueryRequest, GetAllPaymentQueryResponse>
+    public class GetByIdPaymentQueryHandler : IRequestHandler<GetByIdPaymentQueryRequest, GetByIdPaymentQueryResponse>
     {
-        public Task<GetAllPaymentQueryResponse> Handle(GetAllPaymentQueryRequest request, CancellationToken cancellationToken)
+        public Task<GetByIdPaymentQueryResponse> Handle(GetByIdPaymentQueryRequest request, CancellationToken cancellationToken)
         {
             throw new NotImplementedException();
         }
     }
 
-    public record GetAllPaymentQueryResponse(Guid Id, decimal Amount, DateTime PaymentAt, PaymentStatus Status, Providers ProviderName, string ProviderId, Guid DonationId);
+    public record GetByIdPaymentQueryResponse(Guid Id, decimal Amount, DateTime PaymentAt, PaymentStatus Status, Providers ProviderName, string ProviderId, Guid DonationId);
 }

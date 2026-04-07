@@ -1,8 +1,7 @@
 ﻿using FluentValidation;
-using FonlaBeni.Application.Campaign.Commands.Update;
 using FonlaBeni.Application.Extensition;
 
-namespace FonlaBeni.Application.Campaign.Create;
+namespace FonlaBeni.Application.Campaign.Commands.Update;
 
 public class UpdateCampaignValidation:AbstractValidator<UpdateCampaignCommandRequest>
 {

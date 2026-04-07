@@ -1,6 +1,5 @@
 ﻿using FluentValidation;
 using FonlaBeni.Application.Extensition;
-using System.Data;
 
 namespace FonlaBeni.Application.Category.Commands.DeleteCategory;
 

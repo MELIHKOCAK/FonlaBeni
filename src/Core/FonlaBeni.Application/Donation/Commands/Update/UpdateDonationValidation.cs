@@ -1,5 +1,4 @@
 ﻿using FluentValidation;
-using FonlaBeni.Application.Donation.Create;
 using FonlaBeni.Application.Extensition;
 
 namespace FonlaBeni.Application.Donation.Commands.Update;

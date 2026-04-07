@@ -1,4 +1,2 @@
-﻿namespace FonlaBeni.Application.Tag.Commands.Create
-{
-    public record CreateTagCommandResponse(Guid Id);
-}
+﻿namespace FonlaBeni.Application.Tag.Commands.Create;
+public record CreateTagCommandResponse(Guid Id);

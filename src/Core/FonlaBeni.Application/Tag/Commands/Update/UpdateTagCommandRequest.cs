@@ -2,4 +2,4 @@
 
 namespace FonlaBeni.Application.Tag.Commands.Update;
 
-public record UpdateTagCommandRequest(Guid Id):IRequest<UpdateTagCommandResponse>;
+public record UpdateTagCommandRequest(Guid Id, string Name, string Slug) :IRequest<UpdateTagCommandResponse>;

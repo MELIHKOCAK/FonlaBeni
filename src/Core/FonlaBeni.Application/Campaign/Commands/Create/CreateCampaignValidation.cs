@@ -1,15 +1,13 @@
 ﻿using FluentValidation;
+using FonlaBeni.Application.Campaign.Commands.Create;
 using FonlaBeni.Application.Extensition;
 
 namespace FonlaBeni.Application.Campaign.Create;
 
-public class CreateCampaignValidation:AbstractValidator<CreateCampaignDto>
+public class CreateCampaignValidation:AbstractValidator<CreateCampaignCommandRequest>
 {
     public CreateCampaignValidation()
     {
-        RuleFor(x => x.CategoryId)
-            .IsRequired("Kategori Id");
-
         RuleFor(x => x.TargetAmount)
             .Cascade(CascadeMode.Stop)  
             .IsRequired("Hedef Tutar")

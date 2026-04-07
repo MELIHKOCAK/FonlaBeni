@@ -3,15 +3,15 @@ using MediatR;
 
 namespace FonlaBeni.Application.Donation.Queries.GetById
 {
-    public record GetAllDonationQueryRequest : IRequest<GetAllDonationQueryResponse>;
+    public record GetByIdDonationQueryRequest(Guid Id) : IRequest<GetByIdDonationQueryResponse>;
 
-    public class GetAllDonationQueryHandler : IRequestHandler<GetAllDonationQueryRequest, GetAllDonationQueryResponse>
+    public class GetByIdDonationQueryHandler : IRequestHandler<GetByIdDonationQueryRequest, GetByIdDonationQueryResponse>
     {
-        public Task<GetAllDonationQueryResponse> Handle(GetAllDonationQueryRequest request, CancellationToken cancellationToken)
+        public Task<GetByIdDonationQueryResponse> Handle(GetByIdDonationQueryRequest request, CancellationToken cancellationToken)
         {
             throw new NotImplementedException();
         }
     }
 
-    public record GetAllDonationQueryResponse(Guid Id, decimal Amount, string Message, bool IsAnonymous, PaymentStatus Status, Guid CampaignId, Guid UserId);
+    public record GetByIdDonationQueryResponse(Guid Id, decimal Amount, string Message, bool IsAnonymous, PaymentStatus Status, Guid CampaignId, Guid UserId);
 }
