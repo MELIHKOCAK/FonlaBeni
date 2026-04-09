@@ -1,6 +1,6 @@
 ﻿namespace FonlaBeni.Application.Contracts.Persistence;
 
-public interface IUnitOfWork
+public interface IUnitOfWork : IAsyncDisposable
 {
-    Task<int> SaveChangesAsync();
+    Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);
 }
