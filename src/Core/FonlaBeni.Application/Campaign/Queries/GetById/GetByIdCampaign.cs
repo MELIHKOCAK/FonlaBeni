@@ -2,15 +2,13 @@
 
 namespace FonlaBeni.Application.Campaign.Queries.GetById
 {
-    public record GetByIdCampaignCommandRequest(Guid Id) : IRequest<GetByIdCampaignCommandResponse>;
+    public record GetByIdCampaignCommandRequest(Guid Id) : IRequest<CampaignDetailReadModel>;
 
-    public class GetByIdCampaignCommandHandler : IRequestHandler<GetByIdCampaignCommandRequest, GetByIdCampaignCommandResponse>
+    public class GetByIdCampaignCommandHandler : IRequestHandler<GetByIdCampaignCommandRequest, CampaignDetailReadModel>
     {
-        public Task<GetByIdCampaignCommandResponse> Handle(GetByIdCampaignCommandRequest request, CancellationToken cancellationToken)
+        public Task<CampaignDetailReadModel> Handle(GetByIdCampaignCommandRequest request, CancellationToken cancellationToken)
         {
             throw new NotImplementedException();
         }
     }
-
-    public record GetByIdCampaignCommandResponse(Guid Id, string Name, string Slug);
 }
