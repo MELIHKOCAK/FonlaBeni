@@ -2,15 +2,14 @@
 
 namespace FonlaBeni.Application.Campaign.Queries.GetAll
 {
-    public record GetAllCampaignQueryRequest : IRequest<List<GetAllCampaignQueryResponse>>;
+    public record GetAllCampaignQueryRequest : IRequest<List<CampaignListReadModel>>;
 
-    public class GetAllCampaignQueryHandler : IRequestHandler<GetAllCampaignQueryRequest, List<GetAllCampaignQueryResponse>>
+    public class GetAllCampaignQueryHandler : IRequestHandler<GetAllCampaignQueryRequest, List<CampaignListReadModel>>
     {
-        public Task<List<GetAllCampaignQueryResponse>> Handle(GetAllCampaignQueryRequest request, CancellationToken cancellationToken)
+        public Task<List<CampaignListReadModel>> Handle(GetAllCampaignQueryRequest request, CancellationToken cancellationToken)
         {
             throw new NotImplementedException();
         }
     }
-
-    public record GetAllCampaignQueryResponse(Guid Id, string Name, string Slug);
+    
 }
