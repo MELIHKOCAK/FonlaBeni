@@ -14,4 +14,8 @@
     <ProjectReference Include="..\..\Core\FonlaBeni.Application\FonlaBeni.Application.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Contexts\" />
+  </ItemGroup>
+
 </Project>
