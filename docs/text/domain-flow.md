@@ -60,3 +60,4 @@ Bir kullanıcı bağış yaptığında gerçekleşen atomik işlemler:
 
 - `Draft` durumundaki bir proje listelenemez.
 
+- Hedef Tutar Değişmezliği: Aktif duruma geçmiş (Published/Active) ve ilk bağışını almış bir projenin hedef tutarı (Target Amount) kesinlikle değiştirilemez.
