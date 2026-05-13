@@ -1,4 +1,4 @@
-# 🚀 FonlaBeni - Database Strategy
+# 🚀 FonlaBeni - Database Strategies
 
 
 
